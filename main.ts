@@ -8,11 +8,11 @@ basic.forever(function () {
     if (moisture < 40) {
         basic.showIcon(IconNames.Sad)
         OLED.writeStringNewLine("Pump: ON")
-        smarthome.Relay(DigitalPin.P15, smarthome.RelayStateList.On)
+        smarthome.Relay(DigitalPin.P13, smarthome.RelayStateList.On)
     } else if (moisture >= 40) {
         basic.showIcon(IconNames.Happy)
         OLED.writeStringNewLine("Pump: OFF")
-        smarthome.Relay(DigitalPin.P15, smarthome.RelayStateList.Off)
+        smarthome.Relay(DigitalPin.P13, smarthome.RelayStateList.Off)
     }
     basic.pause(100)
 })
